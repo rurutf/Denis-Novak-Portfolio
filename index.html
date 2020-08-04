@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Denis Novik</title>
+</head>
+<body>
+<div class="page">
+
+    <header class="header">
+        <div class="container">
+            <nav class="header-nav">
+                <a class="header-nav-link" href="#"><span>Home</span></a>
+                <a class="header-nav-link" href="#about">About me</a>
+                <a class="header-nav-link" href="#skills">Skills</a>
+                <a class="header-nav-link" href="#portfolio">Portfolio</a>
+                <a class="header-nav-link" href="#contacts">Contacts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1 class="content-title">Nulik<br> Tutulik</h1>
+                <p class="content-text">
+                    UX | UI designer<br> 24 years old, Minsk
+                </p>
+                <p class="content-language">
+                    RU <span>| ENG</span>
+                </p>
+            </div>
+            <div class="author"></div>
+        </div>
+    </main>
+
+        <!--about me-->
+        <div id="about" class="about">
+            <h2 class="about-title">About me</h2>
+            <p class="about-text">
+                Hi! I`m Denis &#8212 UX/UI designer
+                from Minsk.<br> I`m interested in design
+                and everything connected with it.
+            </p>
+            <p class="about-text">
+                I`m studying at courses "Web and mobile
+                design<br> interfaces" in IT-Academy.
+            </p>
+            <p class="about-text">
+                Ready to implement excellent projects
+                with wonderful people.
+            </p>
+        </div><!--/about me-->
+
+        <!--Skills-->
+    <div id="skills" class="skills">
+    	<div class="container">
+        <h2 class="about-title">Skills</h2>
+        <p class="about-text">
+            I work in such programs as
+        </p>
+        <div class="skills-programs">
+            <div class="skills-programs-items">
+                <img src="img/ps.svg" alt="">
+                <p>
+                    Adobe<br> Photoshop
+                </p>
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star-grey.svg" alt="">
+            </div>
+            <div class="skills-programs-items">
+                <img src="img/ai.svg" alt="">
+                <p>
+                    Adobe Illustrator
+                </p>
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star-grey.svg" alt="">
+                <img src="img/star-grey.svg" alt="">
+            </div>
+            <div class="skills-programs-items">
+                <img src="img/ae.svg" alt="">
+                <p>
+                    Adobe<br> After Effects
+                </p>
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star-grey.svg" alt="">
+            </div>
+            <div class="skills-programs-items">
+                <img src="img/figma.svg" alt="">
+                <p>
+                    Figma
+                </p>
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star.svg" alt="">
+                <img src="img/star-grey.svg" alt="">
+
+            </div>
+
+        </div>
+        </div>
+    </div><!--/skills-->
+
+    <!--portfolio-->
+    <div id="portfolio" class="portfolio">
+        <h2 class="about-title portfolio">Portfolio</h2>
+        <!--Fashion Store-->
+        <div class="portfolio-project fashion"></div>
+        <a href="#" class="portfolio-link">
+            Online fashion store - Homepage
+        </a>
+        <!--Reebok-->
+        <div class="portfolio-project reebok"></div>
+        <a href="#" class="portfolio-link">
+            Reebok Store - Concept
+        </a>
+        <!--Braun-->
+        <div class="portfolio-project braun"></div>
+        <a href="#" class="portfolio-link">
+            Braun Landing Page - Concept
+        </a>
+    </div><!--/portfolio-->
+
+    <!--contacts-->
+        <footer>
+            <div id="contacts" class="contacts">
+                <h2 class="about-title">Contacts</h2>
+                <p class="about-text">
+                    Want to know more or just chat?<br>
+                    You are welcome!
+                </p>
+                <button class="btn" type="submit" name="message">
+                    Send message
+                </button>
+                <div class="contacts-icon">
+                    <img src="icon/insta.svg" alt="">
+                    <img src="icon/be.svg" alt="">
+                    <img src="icon/boll.svg" alt="">
+                </div>
+                <p class="contacts-text">
+                    Like me on<br>
+                    Instagram, Behance, Dribble
+                </p>
+            </div>
+        </footer><!--/contacts-->
+
+</div><!--/.page-->
+<script>
+    jQuery(function($){
+        $('a[href*="#"]').on('click.smoothscroll', function( e ){
+            var hash    = this.hash, _hash   = hash.replace(/#/,''), theHref = $(this).attr('href').replace(/#.*/, '');
+            if( theHref && location.href.replace(/#.*/,'') != theHref ) return;
+            var $target = _hash === '' ? $('body') : $( hash + ', a[name="'+ _hash +'"]').first();
+            if( ! $target.length ) return;
+            e.preventDefault();
+            $('html, body').stop().animate({ scrollTop: $target.offset().top - 0 }, 600, 'swing', function(){
+                window.location.hash = hash;
+            });
+        });
+    });
+</script>
+</body>
+</html>
