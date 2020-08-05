@@ -1,1 +1,1 @@
-denisnovak.github.io
+https://rurutf.github.io/denisnovak/
